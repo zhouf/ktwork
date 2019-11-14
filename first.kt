@@ -4,8 +4,9 @@ fun main(args: Array<String>) {
     println("Hello from eclipse kotlin")
     //println("来一个中文试下")
     //println(add(6,7))
-    //foo()
-    print(getstr2())
+    foo()
+    //print(getstr2())
+    listfolder()
 }
 
 
