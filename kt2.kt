@@ -1,23 +1,23 @@
 package demo
 
 fun main(args: Array<String>) {
-    // 这是视频内容练习
+    // 这是视频内容练习，条件判断
+    val age = 8
+    if(age<5){
+        println("Go to Preschool")
+    }else if(age==5){
+        println("Go to Kindergarten")
+    }else if((age>5)&&(age<=17)){
+        val grade = age-5
+        println("Go to Grade: $grade")
+    }else{
+        println("Go to College")
+    }
 
-    var myArray = arrayOf(1,12.3,"dogs")
-    println("myArray.size=${myArray.size}\t contains:${myArray.contains("dogs")}\t first:${myArray.first()}")
-
-    var sqArray = Array(5,{x->x*x})
-    println(sqArray[4])
-
-    val oneTo10 = 1..10
-    val alpha = 'A'..'Z'
-    println(oneTo10 + alpha)
-    println("R in range: ${'R' in alpha}")
-
-    val tenTo1 = 10.downTo(1)
-    val twoTo20 = 2.rangeTo(20)
-    val rng3 = oneTo10.step(3)
-    println(tenTo1 + twoTo20)
-    for(x in rng3) print("rng3: $x, ")
-    for(x in tenTo1.reversed()) print("Reverse: $x ,")
+    when(age){
+        0,1,2,3,4 -> println("Go to Preschool")
+        5->println("Go to Kindergarten")
+        in 6..17 -> println("Go to Grade: ${age-5}")
+        else -> println("Go to College")
+    }
 }
