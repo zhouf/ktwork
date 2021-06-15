@@ -36,7 +36,7 @@ fun ex4(){
         if('1'==str[i]){
             ans += m
         }
-        m *=2
+        m *= 2
     }
     print("$str => $ans")
 }
